@@ -1,8 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import styles from "../styles/post.module.css";
 import Head from "next/head";
-import ReactHtmlParser from "react-html-parser";
-
+import parse from 'html-react-parser';
 const Post = ({ post }) => {
   const { title, date } = post.frontmatter;
 
@@ -19,7 +18,7 @@ const Post = ({ post }) => {
       <h1 className={styles.title}>{title}</h1>
       <p className={styles.date}>{date}</p>
       <div className={styles["post-content"]}>
-          {ReactHtmlParser(post.content)}
+          {parse(post.content)}
         </div>
     </article>
   </div>
