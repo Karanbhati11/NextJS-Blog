@@ -11,6 +11,7 @@ const Post = ({ post }) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={title} />
+  <meta name="google-site-verification" content="JAt505UtgkUlYQYoRLooZMxk78sJOiLvNWGANHyHWKk" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
