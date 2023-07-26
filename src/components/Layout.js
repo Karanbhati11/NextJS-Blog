@@ -13,16 +13,7 @@ const Layout = ({ children, post }) => {
         <meta name="HandheldFriendly" content="True" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
-<<<<<<< HEAD
-        <link
-          rel="canonical"
-          href="https://scifactscentral.netlify.app/index.html"
-        />
         <meta name="referrer" content="no-referrer-when-downgrade" />
-        <meta
-          name="description"
-          content="Time travel has been a captivating concept that has fascinated scientists, philosophers, and dreamers alike for centuries. The mere mention of traveling through time conjures up visions of extraordinary adventure, changing the course of history and unlocking the secrets of the universe. In this enigmatic exploration, we delve deep into the theoretical realm of time travel, where reality and fiction intersect, and where the fabric of space-time unfolds before our eyes."
-        />
         <meta property="og:site_name" content="SciFactsCentral" />
         <meta property="og:type" content="article" />
         <meta
@@ -82,9 +73,10 @@ const Layout = ({ children, post }) => {
         <meta name="twitter:creator" content="@scifactscentral" />
         <meta property="og:image:width" content="2000" />
         <meta property="og:image:height" content="3000" />
-=======
-    <meta name="google-site-verification" content="JAt505UtgkUlYQYoRLooZMxk78sJOiLvNWGANHyHWKk" />
->>>>>>> 8f6e7bdab32be34d2f273e9ad8e1d3f17a55700b
+        <meta
+          name="google-site-verification"
+          content="JAt505UtgkUlYQYoRLooZMxk78sJOiLvNWGANHyHWKk"
+        />
       </Head>
       <main>{children}</main>
     </div>
