@@ -1,11 +1,12 @@
 import Layout from "../../components/Layout";
 import { getAllPostSlugs, getPostData } from "../../lib/posts";
-import Post from "../../components/Post";
+import Postt from "@/components/Postt";
 
 const PostPage = ({ postData }) => {
   return (
-    <Layout>
-      <Post post={postData} />
+    <Layout post={postData}>
+      {/* <Post post={postData} /> */}
+      <Postt post={postData} />
     </Layout>
   );
 };

@@ -1,14 +1,10 @@
 // pages/index.js
 
 import Head from "next/head";
-import Link from "next/link";
 import { useState } from "react";
 import { getSortedPostsData } from "../lib/posts";
-import Navbar from "../components/Navbar";
-import IntroSection from "../components/IntroSection";
 import BlogPostsSection from "../components/BlogPostsSection";
 import Footer from "../components/Footer";
-import styles from "../styles/Home.module.css";
 
 export default function Home({ initialPosts, allPostsData }) {
   const [visiblePosts, setVisiblePosts] = useState(initialPosts);
@@ -26,17 +22,17 @@ export default function Home({ initialPosts, allPostsData }) {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>My Blog</title>
         <meta name="description" content="My blog homepage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
-      <main className={styles.main}>
-        <IntroSection />
+      <main>
+        {/* <IntroSection /> */}
 
         <BlogPostsSection
           initialPosts={initialPosts}
