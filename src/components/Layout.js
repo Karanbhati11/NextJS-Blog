@@ -6,6 +6,7 @@ const Layout = ({ children }) => {
       <Head>
         <title>My Blog</title>
         <link rel="icon" href="/favicon.ico" />
+    <meta name="google-site-verification" content="JAt505UtgkUlYQYoRLooZMxk78sJOiLvNWGANHyHWKk" />
       </Head>
       <main>{children}</main>
     </div>
