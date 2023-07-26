@@ -13,6 +13,7 @@ const Layout = ({ children, post }) => {
         <meta name="HandheldFriendly" content="True" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
+<<<<<<< HEAD
         <link
           rel="canonical"
           href="https://scifactscentral.netlify.app/index.html"
@@ -81,6 +82,9 @@ const Layout = ({ children, post }) => {
         <meta name="twitter:creator" content="@scifactscentral" />
         <meta property="og:image:width" content="2000" />
         <meta property="og:image:height" content="3000" />
+=======
+    <meta name="google-site-verification" content="JAt505UtgkUlYQYoRLooZMxk78sJOiLvNWGANHyHWKk" />
+>>>>>>> 8f6e7bdab32be34d2f273e9ad8e1d3f17a55700b
       </Head>
       <main>{children}</main>
     </div>
