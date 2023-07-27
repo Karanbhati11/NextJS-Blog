@@ -1,5 +1,5 @@
-import Layout from "../../components/Layout";
-import { getAllPostSlugs, getPostData } from "../../lib/posts";
+import Layout from "../../../components/Layout";
+import { getAllPostSlugs, getPostData } from "../../../lib/posts";
 import Postt from "@/components/Postt";
 
 const PostPage = ({ postData }) => {

@@ -6,7 +6,7 @@ const PostTest = ({ post }) => {
     return (
       <div className="post-card post-649a81c2d1a14853257c965f" >
         <div className="relative mb-4">
-          <Link href={`/posts/${post?.slug}`}>
+          <Link href={`/blog/post/${post?.slug}`}>
             <img
               className="object-cover w-full transition-transform duration-300 rounded-theme h-60 hover:scale-[1.01]"
               srcSet={`
@@ -24,7 +24,7 @@ ${post?.frontmatter.image}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;m
         <div>
           <h3 className="mb-3 text-xl font-bold">
             <Link
-              href={`/posts/${post?.slug}`}
+              href={`/blog/post/${post?.slug}`}
               className="hover:underline hover:underline-offset-[3px] dark:text-white"
             >
               {post?.frontmatter.title}
@@ -39,7 +39,7 @@ ${post?.frontmatter.image}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;m
               <li className="relative -ml-3 shrink-0 first:mx-0">
                 <div className="overflow-hidden border-[2px] border-white dark:border-bg-dark rounded-full w-8 h-8">
                   <img
-                    src="profile.jpg"
+                    src="profile.webp"
                     alt="Karan Bhati"
                     className="object-cover w-full h-full rounded-full"
                   />

@@ -1,10 +1,11 @@
-"use-client"
+"use-client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Postt = ({ post }) => {
-  const { title, date } = post.frontmatter;
-
+  const { title, date, description } = post.frontmatter;
   const [tagsData, setTagsData] = useState([]);
 
   useEffect(() => {
@@ -40,25 +41,13 @@ const Postt = ({ post }) => {
   }, [post.content]);
   const PostData = () => {
     return (
-      <div className="post-template tag-ai tag-e-commerce overflow-x-hidden dark:bg-bg-dark" suppressHydrationWarning>
-         <header
-          className="header py-8 bg-bg-accent-color dark"
-          style={{ backgroundColor: "black" }}
-        >
-          <div className="container flex items-center justify-between">
-            <Link href="/" className="logo is-header">
-              <img
-                src="/LOGO.png"
-                alt="SciFactsCentral"
-                className="w-auto h-logo"
-              />
-            </Link>
-          </div>
-        </header>
+      <div
+        className="post-template tag-ai tag-e-commerce overflow-x-hidden dark:bg-bg-dark"
+        suppressHydrationWarning
+      >
+        <Navbar />
 
         <header className="container !max-w-5xl pt-10 md:pt-20 mb-12">
-    
-
           <h1 className="mb-6 text-4xl font-bold md:text-5xl dark:text-white">
             {title}
           </h1>
@@ -68,7 +57,7 @@ const Postt = ({ post }) => {
               <li className="relative shrink-0">
                 <div className="-mx-2 overflow-hidden border-[2px] border-white dark:border-bg-dark rounded-full w-14 h-14">
                   <img
-                    src="/profile.jpg"
+                    src="/profile.webp"
                     alt="Karan Bhati"
                     className="object-cover w-full h-full rounded-full"
                     aria-label="image of the author"
@@ -101,13 +90,14 @@ const Postt = ({ post }) => {
             srcSet={`
               ${tagsData[2]?.img}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGVjb21tZXJjZXxlbnwwfHx8fDE2ODc4MTY4NjF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300   300w,
               ${tagsData[2]?.img}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGVjb21tZXJjZXxlbnwwfHx8fDE2ODc4MTY4NjF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600   600w,
-              ${tagsData[2]?.img}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGVjb21tZXJjZXxlbnwwfHx8fDE2ODc4MTY4NjF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
-              ${tagsData[2]?.img}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGVjb21tZXJjZXxlbnwwfHx8fDE2ODc4MTY4NjF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+              ${tagsData[2]?.img}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGVjb21tZXJjZXxlbnwwfHx8fDE2ODc4MTY4NjF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000,
+              ${tagsData[2]?.img}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGVjb21tZXJjZXxlbnwwfHx8fDE2ODc4MTY4NjF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
             `}
             sizes="(min-width: 1400px) 1400px, 92vw"
             src={`${tagsData[2]?.img}?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDM1fHxnYW1pbmd8ZW58MHx8fHwxNjg3ODQ3Mzg0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000`}
             alt="The Future of Commerce: How AI is Reshaping the Way We Shop"
             aria-label="Main Content image"
+            loading="eager"
           />
         </figure>
         <div className="container !max-w-5xl">
@@ -130,25 +120,61 @@ const Postt = ({ post }) => {
             <p>{tagsData[17]?.p}</p>
             <h3 id="headings">{tagsData[18]?.h2}</h3>
             <p>{tagsData[19]?.p}</p>
-            <p>{tagsData[17]?.p}</p>
-            <h3 id="conclusion">{tagsData[21]?.h2}</h3>
+            <p>{tagsData[20]?.p}</p>
+            <h3 id="headings">{tagsData[21]?.h2}</h3>
             <p>{tagsData[22]?.p}</p>
             <p>{tagsData[23]?.p}</p>
+            <h3 id="conclusion">{tagsData[24]?.h2}</h3>
+            <p>{tagsData[25]?.p}</p>
+            <p>{tagsData[26]?.p}</p>
+          </div>
+          <div className="container">
+            <div className="h-[1px] bg-gray-300 dark:bg-gray-700 w-full"></div>
+          </div>
+          <div className="container !max-w-5xl">
+            <div className="mb-14 prose prose-lg md:prose-xl hover:prose-a:text-accent-color prose-a:underline-offset-[3px] max-w-none dark:prose-invert">
+              <h3 style={{ textAlign: "center" }} id="conclusion">
+                FAQ
+              </h3>
+              <h4 style={{ textAlign: "center" }} id="conclusion">
+                How can I earn 1000 rs a day online?
+              </h4>
+              <p style={{ textAlign: "center" }}>
+                Jobs Like Data Entry, Content Writing, Proofreading, YouTube,
+                Instagram, Online Tutoring or Coaching, Freelance Graphic Design
+                & Programming.
+              </p>
+              <h4 style={{ textAlign: "center" }} id="conclusion">
+                How can I earn $100 a day?
+              </h4>
+              <p style={{ textAlign: "center" }}>
+                Take part in research (up to $150/hour), Get paid to take
+                surveys, Answer questions for money, Get paid to play games
+                online, Get paid to watch videos online,
+              </p>
+              <h4 style={{ textAlign: "center" }} id="conclusion">
+                How can I earn 500 per day online?
+              </h4>
+              <p style={{ textAlign: "center" }}>
+                start a blog, start a youtube channel, start a freelancing work,
+              </p>
+              <h4 style={{ textAlign: "center" }} id="conclusion">
+                how to earn money online
+              </h4>
+              <p style={{ textAlign: "center" }}>
+                search for online jobs, learn new skills and apply, earn for
+                content writing, earn for data entry, earn from blogging, earn
+                from ai
+              </p>
+              <h4 style={{ textAlign: "center" }} id="conclusion">
+                how to earn money online without investments
+              </h4>
+              <p style={{ textAlign: "center" }}>earn money from job</p>
+            </div>
           </div>
         </div>
 
-        <footer
-        className="header py-8 bg-bg-accent-color light"
-        style={{ backgroundColor: "black" }}
-      >
-        <div
-          className="container flex items-center justify-center"
-         style={{color:'white'}}
-        >
-          &copy; 2023 SciFactsCentral, All Rights Reserved.
-        </div>
-      </footer>
-
+        <Footer />
       </div>
     );
   };
