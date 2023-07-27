@@ -10,25 +10,25 @@ const index = () => {
         metaDescription={
           "you can contact me through this page or email me at deadlygmerx@gmail.com!"
         }
-        siteName={"randomposts"}
+        siteName={"karanbhati.tech"}
         siteType={"personal and blog"}
         pageTitle={"Contact Us"}
         ogDescription={
           "you can contact me through this page or email me at deadlygmerx@gmail.com!"
         }
-        pageURL={"https://randomposts.netlify.app/contact"}
-        ogImage={"https://images.unsplash.com/photo-1559030623-0226b1241edd"}
+        pageURL={"https://karanbhati.tech/contact"}
+        ogImage={"/profile.png"}
         facebookURL={"https://facebook.com/karanbhati"}
         authorURL={"https://karanbhati.netlify.app"}
         twitterTitle={"Contact"}
         twitterDescription={
           "you can contact me through this page or email me at deadlygmerx@gmail.com!"
         }
-        twitterpageURL={"https://randomposts.netlify.app/contact"}
+        twitterpageURL={"https://karanbhati.tech/contact"}
         twitterImage={
-          "https://images.unsplash.com/photo-1559030623-0226b1241edd"
+          "/profile.png"
         }
-        twittersiteName={"randomposts"}
+        twittersiteName={"karanbhati.tech"}
         twitterauthorName={"karanbhati"}
       />
       <div className="page-template page-contact overflow-x-hidden dark:bg-bg-dark">

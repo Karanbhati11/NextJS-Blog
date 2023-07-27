@@ -9,7 +9,16 @@
 :before {
   --tw-content: "";
 }
+:root {
+  --font-family-title: "Mulish", sans-serif;
 
+  --font-family-body: "Mulish", sans-serif;
+
+  --background-accent-color: #151a25;
+}
+@import url("https://fonts.googleapis.com/css?family=Mulish:300,400,500,600,700&amp;display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Mulish:300,400,500,600,700&amp;display=swap");
 html {
   -webkit-text-size-adjust: 100%;
   font-feature-settings: normal;

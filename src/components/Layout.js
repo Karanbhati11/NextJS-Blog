@@ -2,7 +2,21 @@ import Head from "next/head";
 
 const Layout = ({ children, post }) => {
   const { title, date, image, description } = post.frontmatter;
-  const BASE_URL = "https://randomposts.netlify.app";
+  function convertDateFormat(dateString) {
+    // Parse the date string using Date object
+    const date = new Date(dateString);
+  
+    // Check if the date is valid
+    if (isNaN(date)) {
+      return "Invalid Date";
+    }
+  
+    // Get the date in the desired format (UTC)
+    const formattedDate = date.toISOString();
+  
+    return formattedDate;
+  }
+  const BASE_URL = "https://karanbhati.tech";
   return (
     <div>
       <Head>
@@ -15,7 +29,7 @@ const Layout = ({ children, post }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="referrer" content="no-referrer-when-downgrade" />
-        <meta property="og:site_name" content="randomposts" />
+        <meta property="og:site_name" content="karanbhati.tech" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -29,11 +43,11 @@ const Layout = ({ children, post }) => {
         />
         <meta
           property="article:published_time"
-          content="2023-07-20T13:01:26.000Z"
+          content={convertDateFormat(date)}
         />
         <meta
           property="article:modified_time"
-          content="2023-07-20T13:01:26.000Z"
+          content={convertDateFormat(date)}
         />
 
         <meta property="article:publisher" content={BASE_URL} />

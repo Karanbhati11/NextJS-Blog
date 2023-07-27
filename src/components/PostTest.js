@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-Link
+Link;
 const PostTest = ({ post }) => {
   const Mapper = () => {
     return (
-      <div className="post-card post-649a81c2d1a14853257c965f" >
+      <div className="post-card post-649a81c2d1a14853257c965f">
         <div className="relative mb-4">
           <Link href={`/blog/post/${post?.slug}`}>
             <img
@@ -31,8 +31,10 @@ ${post?.frontmatter.image}?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;m
             </Link>
           </h3>
           <p className="mb-3 text-base leading-relaxed text-gray-700 dark:text-white line-clamp-3">
-          {post?.frontmatter.date}
-
+            {post?.frontmatter.description}
+          </p>
+          <p className="mb-3 text-base leading-relaxed text-gray-700 dark:text-white line-clamp-3">
+            {post?.frontmatter.date}
           </p>
           <div className="flex items-center text-[13px] dark:text-white font-bold">
             <ul className="flex flex-wrap p-0 list-none">

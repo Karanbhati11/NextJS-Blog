@@ -23,10 +23,10 @@ const Navbar = () => {
       }}
     >
       <div className="container flex items-center justify-between">
-        <Link href="/" className="logo is-header" legacyBehavior>
+        <Link href="/" className="logo is-header" style={{height:'30px',width:'200px'}} >
           <img
-            src="/LOGO.png"
-            alt="SciFactsCentral"
+            src="/logo-no-background.svg"
+            alt="karan bhati logo"
             className="w-auto h-logo"
           />
         </Link>

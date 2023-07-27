@@ -47,7 +47,10 @@ const Postt = ({ post }) => {
       >
         <Navbar />
 
-        <header className="container !max-w-5xl pt-10 md:pt-20 mb-12">
+        <header
+          className="container !max-w-5xl pt-10 md:pt-20 mb-12"
+          style={{ marginTop: "85px" }}
+        >
           <h1 className="mb-6 text-4xl font-bold md:text-5xl dark:text-white">
             {title}
           </h1>
@@ -126,50 +129,35 @@ const Postt = ({ post }) => {
             <p>{tagsData[23]?.p}</p>
             <h3 id="conclusion">{tagsData[24]?.h2}</h3>
             <p>{tagsData[25]?.p}</p>
-            <p>{tagsData[26]?.p}</p>
           </div>
           <div className="container">
             <div className="h-[1px] bg-gray-300 dark:bg-gray-700 w-full"></div>
           </div>
           <div className="container !max-w-5xl">
             <div className="mb-14 prose prose-lg md:prose-xl hover:prose-a:text-accent-color prose-a:underline-offset-[3px] max-w-none dark:prose-invert">
-              <h3 style={{ textAlign: "center" }} id="conclusion">
+              <h3 style={{ textAlign: "start" }} id="conclusion">
                 FAQ
               </h3>
-              <h4 style={{ textAlign: "center" }} id="conclusion">
-                How can I earn 1000 rs a day online?
+              <h4 style={{ textAlign: "start" }} id="conclusion">
+                {tagsData[26]?.h4}
               </h4>
-              <p style={{ textAlign: "center" }}>
-                Jobs Like Data Entry, Content Writing, Proofreading, YouTube,
-                Instagram, Online Tutoring or Coaching, Freelance Graphic Design
-                & Programming.
-              </p>
-              <h4 style={{ textAlign: "center" }} id="conclusion">
-                How can I earn $100 a day?
+              <p style={{ textAlign: "justify" }}>{tagsData[27]?.p}</p>
+              <h4 style={{ textAlign: "start" }} id="conclusion">
+                {tagsData[28]?.h4}
               </h4>
-              <p style={{ textAlign: "center" }}>
-                Take part in research (up to $150/hour), Get paid to take
-                surveys, Answer questions for money, Get paid to play games
-                online, Get paid to watch videos online,
-              </p>
-              <h4 style={{ textAlign: "center" }} id="conclusion">
-                How can I earn 500 per day online?
+              <p style={{ textAlign: "justify" }}>{tagsData[29]?.p}</p>
+              <h4 style={{ textAlign: "start" }} id="conclusion">
+              {tagsData[30]?.h4}
               </h4>
-              <p style={{ textAlign: "center" }}>
-                start a blog, start a youtube channel, start a freelancing work,
-              </p>
-              <h4 style={{ textAlign: "center" }} id="conclusion">
-                how to earn money online
+              <p style={{ textAlign: "justify" }}>{tagsData[31]?.p}</p>
+              <h4 style={{ textAlign: "start" }} id="conclusion">
+                {tagsData[32]?.h4}
               </h4>
-              <p style={{ textAlign: "center" }}>
-                search for online jobs, learn new skills and apply, earn for
-                content writing, earn for data entry, earn from blogging, earn
-                from ai
-              </p>
-              <h4 style={{ textAlign: "center" }} id="conclusion">
-                how to earn money online without investments
+              <p style={{ textAlign: "justify" }}>{tagsData[33]?.p}</p>
+              <h4 style={{ textAlign: "start" }} id="conclusion">
+                {tagsData[34]?.h4}
               </h4>
-              <p style={{ textAlign: "center" }}>earn money from job</p>
+              <p style={{ textAlign: "justify" }}> {tagsData[35]?.p}</p>
             </div>
           </div>
         </div>

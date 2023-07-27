@@ -26,25 +26,25 @@ export default function page({ initialPosts, allPostsData }) {
         metaDescription={
           "welcome to my blog, here you will find posts related to everything!"
         }
-        siteName={"randomposts"}
+        siteName={"karanbhati.tech"}
         siteType={"personal and blog"}
         pageTitle={"Blog"}
         ogDescription={
           "welcome to my blog, here you will find posts related to everything!"
         }
-        pageURL={"https://randomposts.netlify.app/blog"}
-        ogImage={"https://images.unsplash.com/photo-1559030623-0226b1241edd"}
+        pageURL={"https://karanbhati.tech/blog"}
+        ogImage={"/profile.png"}
         facebookURL={"https://facebook.com/karanbhati"}
         authorURL={"https://karanbhati.netlify.app"}
         twitterTitle={"Blog"}
         twitterDescription={
           "welcome to my blog, here you will find posts related to everything!"
         }
-        twitterpageURL={"https://randomposts.netlify.app/blog"}
+        twitterpageURL={"https://karanbhati.tech/blog"}
         twitterImage={
-          "https://images.unsplash.com/photo-1559030623-0226b1241edd"
+          "/profile.png"
         }
-        twittersiteName={"randomposts"}
+        twittersiteName={"karanbhati.tech"}
         twitterauthorName={"karanbhati"}
       />
 
